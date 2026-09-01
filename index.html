@@ -16,41 +16,10 @@
             --gold-accent: #C5A059;
             --gold-light: #DFC07F;
             --border-color: #E8E4D9;
-/* =========================================
-           تأثيرات الظهور الواضحة عند فتح الموقع
-           ========================================= */
-        @keyframes fadeInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(60px); /* يبدأ من مسافة أسفل أكبر لتظهر الحركة بوضوح */
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);    /* يصل لمكانه الطبيعي */
-            }
-        }
-
-        /* جعل العناصر مخفية في البداية لتتجهز للحركة */
-        header, .day-title, .card, footer {
-            opacity: 0;
-            animation: fadeInUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-        }
-
-        /* تتابع زمني ملموس في الظهور */
-        header { animation-delay: 0.2s; }
-        .day-title:nth-of-type(1) { animation-delay: 0.5s; }
-        .card-adab { animation-delay: 0.8s; }
-        .card-aqidah { animation-delay: 1.1s; }
-        .day-title:nth-of-type(2) { animation-delay: 1.4s; }
-        .card-sirah { animation-delay: 1.7s; }
-        footer { animation-delay: 2.0s; }
-            /* Section Specific Colors */
-            --adab-color: #4A5D4E;        /* Olive Green */
-            --adab-bg: #F0F4F1;
-            --aqidah-color: #2D5F6E;     /* Blue-Green / Teal */
-            --aqidah-bg: #EEF5F7;
-            --sirah-color: #7A3B3B;      /* Deep Auburn/Burgundy */
-            --sirah-bg: #FBF4F4;
+            
+            --adab-color: #4A5D4E;
+            --aqidah-color: #2D5F6E;
+            --sirah-color: #7A3B3B;
         }
 
         * {
@@ -71,7 +40,6 @@
             line-height: 1.6;
             background-image: radial-gradient(#C5A059 0.5px, transparent 0.5px);
             background-size: 24px 24px;
-            background-color: #F9F7F2;
         }
 
         .container {
@@ -85,11 +53,7 @@
             text-align: center;
             margin-bottom: 32px;
             padding: 24px 16px 16px;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(8px);
-            border-radius: 20px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            background: transparent;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -100,15 +64,9 @@
             width: 130px;
             height: auto;
             margin-bottom: 12px;
-            mix-blend-mode: multiply;
-            filter: contrast(105%);
-        }
-
-        .ornament-top {
-            color: var(--gold-accent);
-            font-size: 20px;
-            margin-bottom: 8px;
-            letter-spacing: 4px;
+            background: transparent !important;
+            mix-blend-mode: normal !important;
+            filter: none !important;
         }
 
         h1.main-title {
@@ -160,7 +118,7 @@
             font-size: 14px;
             font-weight: 700;
             letter-spacing: 1.5px;
-            color: #000000; /* خط أسود لعناوين الأيام */
+            color: #000000;
             direction: ltr;
             display: flex;
             align-items: center;
@@ -189,7 +147,6 @@
             transform: scale(0.99);
         }
 
-        /* Card Header / Badge */
         .category-header {
             display: flex;
             justify-content: space-between;
@@ -213,53 +170,22 @@
             direction: ltr;
         }
 
-        /* Course Specific Theming */
-        .card-adab {
-            border-top: 5px solid var(--adab-color);
-        }
-        .card-adab .category-title-ar, 
-        .card-adab .category-title-de {
-            color: var(--adab-color);
-        }
-        .card-adab .btn-download {
-            background-color: var(--adab-color);
-        }
-        .card-adab .btn-download:hover {
-            background-color: #3B4B3F;
-        }
+        .card-adab { border-top: 5px solid var(--adab-color); }
+        .card-adab .category-title-ar, .card-adab .category-title-de { color: var(--adab-color); }
+        .card-adab .btn-download { background-color: var(--adab-color); }
+        .card-adab .btn-download:hover { background-color: #3B4B3F; }
 
-        .card-aqidah {
-            border-top: 5px solid var(--aqidah-color);
-        }
-        .card-aqidah .category-title-ar, 
-        .card-aqidah .category-title-de {
-            color: var(--aqidah-color);
-        }
-        .card-aqidah .btn-download {
-            background-color: var(--aqidah-color);
-        }
-        .card-aqidah .btn-download:hover {
-            background-color: #224955;
-        }
+        .card-aqidah { border-top: 5px solid var(--aqidah-color); }
+        .card-aqidah .category-title-ar, .card-aqidah .category-title-de { color: var(--aqidah-color); }
+        .card-aqidah .btn-download { background-color: var(--aqidah-color); }
+        .card-aqidah .btn-download:hover { background-color: #224955; }
 
-        .card-sirah {
-            border-top: 5px solid var(--sirah-color);
-        }
-        .card-sirah .category-title-ar, 
-        .card-sirah .category-title-de {
-            color: var(--sirah-color);
-        }
-        .card-sirah .btn-download {
-            background-color: var(--sirah-color);
-        }
-        .card-sirah .btn-download:hover {
-            background-color: #602D2D;
-        }
+        .card-sirah { border-top: 5px solid var(--sirah-color); }
+        .card-sirah .category-title-ar, .card-sirah .category-title-de { color: var(--sirah-color); }
+        .card-sirah .btn-download { background-color: var(--sirah-color); }
+        .card-sirah .btn-download:hover { background-color: #602D2D; }
 
-        /* Book Content */
-        .book-info {
-            margin-bottom: 20px;
-        }
+        .book-info { margin-bottom: 20px; }
 
         .book-title-ar {
             font-family: 'Amiri', serif;
@@ -288,7 +214,7 @@
             align-items: center;
             gap: 6px;
         }
-/* Download Button */
+
         .btn-download {
             display: flex;
             align-items: center;
@@ -306,9 +232,7 @@
             -webkit-tap-highlight-color: transparent;
         }
 
-        .btn-text-ar {
-            font-family: 'Noto Naskh Arabic', serif;
-        }
+        .btn-text-ar { font-family: 'Noto Naskh Arabic', serif; }
 
         .btn-text-de {
             font-family: 'Plus Jakarta Sans', sans-serif;
@@ -323,7 +247,6 @@
             fill: currentColor;
         }
 
-        /* Footer */
         footer {
             margin-top: 36px;
             text-align: center;
@@ -343,31 +266,43 @@
             color: #9CA3AF;
             margin-top: 4px;
         }
+
+        /* =========================================
+           تأثير الظهور السلس والسريع للحاوية الأساسية
+           ========================================= */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- Header Section -->
-      <!-- Header Section -->
         <header>
-          <img src="logo.png.png" alt="Bidayah Logo" class="header-logo">
+            <img src="logo.png.png" alt="Bidayah Logo" class="header-logo">
             <h1 class="main-title">مقررات الدورة العلمية</h1>
             <div class="subtitle">BĪDĀYAH-SEMINAR</div>
             <div class="divider"></div>
         </header>
-      
 
-        <!-- Courses Section -->
         <main class="courses-list">
 
-            <!-- عنوان اليوم الأول (العربي يمين، الألماني يسار وبخط أسود) -->
             <div class="day-title">
                 <span class="day-title-ar">📌 اليوم الأول</span>
                 <span class="day-title-de">ERSTER TAG 📌</span>
             </div>
 
-            <!-- 1. Adab -->
             <article class="card card-adab">
                 <div class="category-header">
                     <span class="category-title-ar">الأدب</span>
@@ -388,7 +323,6 @@
                 </a>
             </article>
 
-            <!-- 2. Aqidah -->
             <article class="card card-aqidah">
                 <div class="category-header">
                     <span class="category-title-ar">العقيدة</span>
@@ -409,13 +343,11 @@
                 </a>
             </article>
 
-            <!-- عنوان اليوم الثاني (العربي يمين، الألماني يسار وبخط أسود) -->
             <div class="day-title" style="margin-top: 36px;">
                 <span class="day-title-ar">📌 اليوم الثاني</span>
                 <span class="day-title-de">ZWEITER TAG 📌</span>
             </div>
 
-            <!-- 3. Sirah -->
             <article class="card card-sirah">
                 <div class="category-header">
                     <span class="category-title-ar">السيرة</span>
@@ -438,7 +370,6 @@
 
         </main>
 
-        <!-- Footer Section -->
         <footer>
             <div class="footer-logo">BĪDĀYAH-SEMINAR</div>
             <div class="footer-sub">جميع الحقوق محفوظة ©</div>
@@ -447,4 +378,3 @@
 
 </body>
 </html>
-
