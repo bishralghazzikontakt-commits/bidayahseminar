@@ -3,400 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مقررات الدورة العلمية | BĪDĀYAH-SEMINAR</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@600;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+    <title>بداية - Bidayah</title>
     <style>
-        :root {
-            --bg-color: #F9F7F2;
-            --card-bg: #FFFFFF;
-            --text-dark: #1F2921;
-            --text-muted: #5A655D;
-            --gold-accent: #C5A059;
-            --gold-light: #DFC07F;
-            --border-color: #E8E4D9;
-            
-            /* Section Specific Colors */
-            --adab-color: #4A5D4E;        /* Olive Green */
-            --adab-bg: #F0F4F1;
-            --aqidah-color: #2D5F6E;     /* Blue-Green / Teal */
-            --aqidah-bg: #EEF5F7;
-            --tarajim-color: #8C6D3B;    /* Warm Ochre / Amber */
-            --tarajim-bg: #FAF6F0;
-            --sirah-color: #7A3B3B;      /* Deep Auburn/Burgundy */
-            --sirah-bg: #FBF4F4;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
         body {
-            background-color: var(--bg-color);
-            color: var(--text-dark);
-            font-family: 'Noto Naskh Arabic', 'Amiri', serif;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 24px 16px 40px;
-            line-height: 1.6;
-            background-image: radial-gradient(#C5A059 0.5px, transparent 0.5px);
-            background-size: 24px 24px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 20px;
+            color: #333;
         }
-
         .container {
-            width: 100%;
-            max-width: 520px;
+            max-width: 800px;
             margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
         }
-
-        /* Header Styling */
-        header {
+        h1 {
             text-align: center;
-            margin-bottom: 32px;
-            padding: 24px 16px 16px;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(8px);
-            border-radius: 20px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-        }
-
-        .ornament-top {
-            color: var(--gold-accent);
-            font-size: 20px;
-            margin-bottom: 8px;
-            letter-spacing: 4px;
-        }
-
-        h1.main-title {
-            font-family: 'Amiri', serif;
+            color: #1e3a8a;
+            margin-bottom: 25px;
             font-size: 28px;
-            font-weight: 700;
-            color: #1A3323;
-            margin-bottom: 4px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 15px;
         }
-
-        .subtitle {
-            font-family: 'Cinzel', serif;
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--gold-accent);
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .divider {
-            height: 2px;
-            width: 60px;
-            background: linear-gradient(90deg, transparent, var(--gold-accent), transparent);
-            margin: 14px auto 0;
-        }
-
-        /* Day Separator Header */
-        .day-header {
-            font-family: 'Amiri', serif;
-            font-size: 20px;
-            font-weight: 700;
-            color: #1A3323;
-            margin: 28px 0 16px 0;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 8px;
-        }
-
-        /* Course Cards Layout */
-        .courses-list {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .card {
-            background: var(--card-bg);
-            border-radius: 18px;
-            padding: 24px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card:active {
-            transform: scale(0.99);
-        }
-
-        /* Card Header / Badge */
-        .category-header {
+        .day-section {
+            margin-bottom: 25px;
+            padding: 20px;
+            background-color: #f8fafc;
+            border-right: 5px solid #2563eb;
+            border-radius: 8px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 16px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 15px;
         }
-
-        .category-title-ar {
-            font-family: 'Amiri', serif;
+        .day-title {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .title-ar {
             font-size: 20px;
-            font-weight: 700;
+            font-weight: bold;
+            color: #1e293b;
         }
-
-        .category-title-de {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            direction: ltr;
-        }
-
-        /* Course Specific Theming */
-        .card-adab {
-            border-top: 5px solid var(--adab-color);
-        }
-        .card-adab .category-title-ar, 
-        .card-adab .category-title-de {
-            color: var(--adab-color);
-        }
-        .card-adab .btn-download {
-            background-color: var(--adab-color);
-        }
-        .card-adab .btn-download:hover {
-            background-color: #3B4B3F;
-        }
-
-        .card-aqidah {
-            border-top: 5px solid var(--aqidah-color);
-        }
-        .card-aqidah .category-title-ar, 
-        .card-aqidah .category-title-de {
-            color: var(--aqidah-color);
-        }
-        .card-aqidah .btn-download {
-            background-color: var(--aqidah-color);
-        }
-        .card-aqidah .btn-download:hover {
-            background-color: #224955;
-        }
-
-        .card-tarajim {
-            border-top: 5px solid var(--tarajim-color);
-        }
-        .card-tarajim .category-title-ar, 
-        .card-tarajim .category-title-de {
-            color: var(--tarajim-color);
-        }
-        .card-tarajim .btn-download {
-            background-color: var(--tarajim-color);
-        }
-        .card-tarajim .btn-download:hover {
-            background-color: #73592F;
-        }
-
-        .card-sirah {
-            border-top: 5px solid var(--sirah-color);
-        }
-        .card-sirah .category-title-ar, 
-        .card-sirah .category-title-de {
-            color: var(--sirah-color);
-        }
-        .card-sirah .btn-download {
-            background-color: var(--sirah-color);
-        }
-        .card-sirah .btn-download:hover {
-            background-color: #602D2D;
-        }
-
-        /* Book Content */
-        .book-info {
-            margin-bottom: 20px;
-        }
-
-        .book-title-ar {
-            font-family: 'Amiri', serif;
-            font-size: 22px;
-            font-weight: 700;
-            color: var(--text-dark);
-            line-height: 1.3;
-            margin-bottom: 4px;
-        }
-
-        .book-title-de {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 14px;
-            color: var(--text-muted);
-            font-weight: 500;
+        .title-de {
+            font-size: 16px;
+            color: #64748b;
+            font-weight: 600;
             direction: ltr;
             text-align: right;
-            margin-bottom: 10px;
-            font-style: italic;
         }
-
-        .book-author {
-            font-size: 13.5px;
-            color: #6B7280;
-            display: flex;
+        .pdf-button {
+            display: inline-flex;
             align-items: center;
-            gap: 6px;
-        }
-
-        /* Download Button */
-        .btn-download {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            width: 100%;
-            padding: 14px 20px;
-            color: #FFFFFF;
+            gap: 8px;
+            background-color: #2563eb;
+            color: white;
+            padding: 10px 20px;
             text-decoration: none;
-            border-radius: 12px;
+            border-radius: 6px;
             font-weight: 600;
-            font-size: 15px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.2s ease, transform 0.1s ease;
-            -webkit-tap-highlight-color: transparent;
+            transition: background-color 0.2s ease;
         }
-
-        .btn-text-ar {
-            font-family: 'Noto Naskh Arabic', serif;
+        .pdf-button:hover {
+            background-color: #1d4ed8;
         }
-
-        .btn-text-de {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 13px;
-            opacity: 0.9;
-            direction: ltr;
-        }
-
         .pdf-icon {
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 18px;
             fill: currentColor;
-        }
-
-        /* Footer */
-        footer {
-            margin-top: 36px;
-            text-align: center;
-            padding: 16px;
-        }
-
-        .footer-logo {
-            font-family: 'Cinzel', serif;
-            font-size: 15px;
-            font-weight: 700;
-            color: var(--gold-accent);
-            letter-spacing: 3px;
-        }
-
-        .footer-sub {
-            font-size: 11px;
-            color: #9CA3AF;
-            margin-top: 4px;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Header Section -->
-        <header>
-            <div class="ornament-top">❖ ◈ ❖</div>
-            <h1 class="main-title">مقررات الدورة العلمية</h1>
-            <div class="subtitle">BĪDĀYAH-SEMINAR</div>
-            <div class="divider"></div>
-        </header>
+<div class="container">
+    <h1>جدول المحاضرات | Seminarplan</h1>
 
-        <!-- Courses Section -->
-        <main class="courses-list">
-
-            <!-- اليوم الأول -->
-            <h2 class="day-header">📌 اليوم الأول</h2>
-
-            <!-- 1. Adab -->
-            <article class="card card-adab">
-                <div class="category-header">
-                    <span class="category-title-ar">الأدب</span>
-                    <span class="category-title-de">ADAB</span>
-                </div>
-                <div class="book-info">
-                    <h2 class="book-title-ar">منظومة دُرَّة طالب العلم</h2>
-                    <p class="book-title-de">Die Perle des Wissensstrebenden</p>
-                    <p class="book-author">تأليف: الشيخ د. مطلق بن جاسر الجاسر</p>
-                </div>
-                <a href="-منظومة-درة-طالب-العلم.pdf" target="_blank" rel="noopener" class="btn-download">
-                    <svg class="pdf-icon" viewBox="0 0 24 24">
-                        <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM12 17L7 12H10V8H14V12H17L12 17Z"/>
-                    </svg>
-                    <span class="btn-text-ar">فتح الكتاب</span>
-                    <span>|</span>
-                    <span class="btn-text-de">PDF öffnen</span>
-                </a>
-            </article>
-
-            <!-- 2. Aqidah -->
-            <article class="card card-aqidah">
-                <div class="category-header">
-                    <span class="category-title-ar">العقيدة</span>
-                    <span class="category-title-de">ʿAQĪDAH</span>
-                </div>
-                <div class="book-info">
-                    <h2 class="book-title-ar">اعتقاد عبد الله بن المبارك</h2>
-                    <p class="book-title-de">Glaubenslehre des Imām Ibn Al-Mubārak</p>
-                    <p class="book-author">أبو عبد الرحمن عبد الله بن المبارك الحنظلي (ت 181هـ)</p>
-                </div>
-                <a href="اعتقاد عبد الله ابن المبارك.pdf" target="_blank" rel="noopener" class="btn-download">
-                    <svg class="pdf-icon" viewBox="0 0 24 24">
-                        <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM12 17L7 12H10V8H14V12H17L12 17Z"/>
-                    </svg>
-                    <span class="btn-text-ar">فتح الكتاب</span>
-                    <span>|</span>
-                    <span class="btn-text-de">PDF öffnen</span>
-                </a>
-            </article>
-
-         
-
-            <!-- اليوم الثاني -->
-            <h2 class="day-header" style="margin-top: 36px;">📌 اليوم الثاني</h2>
-
-            <!-- 4. Sirah -->
-            <article class="card card-sirah">
-                <div class="category-header">
-                    <span class="category-title-ar">السيرة</span>
-                    <span class="category-title-de">SĪRAH</span>
-                </div>
-                <div class="book-info">
-                    <h2 class="book-title-ar">أوجز السِّيَر لخير البشر</h2>
-                    <p class="book-title-de">Awǧaz as-Siyar li-Ḫayr al-Bašar</p>
-                    <p class="book-author">لأبي الحسين أحمد بن فارس (ت 395هـ)</p>
-                </div>
-                <a href="أوْجزالسّير لخير البشر لابن فارس.pdf" target="_blank" rel="noopener" class="btn-download">
-                    <svg class="pdf-icon" viewBox="0 0 24 24">
-                        <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM12 17L7 12H10V8H14V12H17L12 17Z"/>
-                    </svg>
-                    <span class="btn-text-ar">فتح الكتاب</span>
-                    <span>|</span>
-                    <span class="btn-text-de">PDF öffnen</span>
-                </a>
-            </article>
-
-        </main>
-
-        <!-- Footer Section -->
-        <footer>
-            <div class="footer-logo">BĪDĀYAH-SEMINAR</div>
-            <div class="footer-sub">جميع الحقوق محفوظة ©</div>
-        </footer>
+    <div class="day-section">
+        <div class="day-title">
+            <span class="title-ar">اليوم الأول</span>
+            <span class="title-de">Tag 1</span>
+        </div>
+        <a href="day1.pdf" class="pdf-button" target="_blank">
+            <svg class="pdf-icon" viewBox="0 0 24 24">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5v1zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5v3zm4-3h-2v1h1.5V13H16v2h-1.5V9H18.5v1.5z"/>
+            </svg>
+            تحميل PDF / Download
+        </a>
     </div>
+
+    <div class="day-section">
+        <div class="day-title">
+            <span class="title-ar">اليوم الثاني</span>
+            <span class="title-de">Tag 2</span>
+        </div>
+        <a href="day2.pdf" class="pdf-button" target="_blank">
+            <svg class="pdf-icon" viewBox="0 0 24 24">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5v1zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5v3zm4-3h-2v1h1.5V13H16v2h-1.5V9H18.5v1.5z"/>
+            </svg>
+            تحميل PDF / Download
+        </a>
+    </div>
+
+    <div class="day-section">
+        <div class="day-title">
+            <span class="title-ar">اليوم الثالث</span>
+            <span class="title-de">Tag 3</span>
+        </div>
+        <a href="day3.pdf" class="pdf-button" target="_blank">
+            <svg class="pdf-icon" viewBox="0 0 24 24">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5v1zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5v3zm4-3h-2v1h1.5V13H16v2h-1.5V9H18.5v1.5z"/>
+            </svg>
+            تحميل PDF / Download
+        </a>
+    </div>
+
+</div>
 
 </body>
 </html>
