@@ -16,7 +16,405 @@
             --gold-accent: #C5A059;
             --gold-light: #DFC07F;
             --border-color: #E8E4D9;
+            <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مقررات الدورة العلمية | BĪDĀYAH-SEMINAR</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@600;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #F9F7F2;
+            --card-bg: #FFFFFF;
+            --text-dark: #1F2921;
+            --text-muted: #5A655D;
+            --gold-accent: #C5A059;
+            --gold-light: #DFC07F;
+            --border-color: #E8E4D9;
             
+            --adab-color: #4A5D4E;
+            --aqidah-color: #2D5F6E;
+            --sirah-color: #7A3B3B;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            font-family: 'Noto Naskh Arabic', 'Amiri', serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 24px 16px 40px;
+            line-height: 1.6;
+            background-image: radial-gradient(#C5A059 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 520px;
+            margin: 0 auto;
+        }
+
+        /* Header Styling */
+        header {
+            text-align: center;
+            margin-bottom: 32px;
+            padding: 24px 16px 16px;
+            background: transparent;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Logo Styling */
+        .header-logo {
+            width: 130px;
+            height: auto;
+            margin-bottom: 12px;
+            background: transparent !important;
+            mix-blend-mode: normal !important;
+            filter: none !important;
+        }
+
+        h1.main-title {
+            font-family: 'Amiri', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #1A3323;
+            margin-bottom: 4px;
+        }
+
+        .subtitle {
+            font-family: 'Cinzel', serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gold-accent);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .divider {
+            height: 2px;
+            width: 60px;
+            background: linear-gradient(90deg, transparent, var(--gold-accent), transparent);
+            margin: 14px auto 0;
+        }
+
+        /* Day Divider Section */
+        .day-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 28px 0 16px 0;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .day-title-ar {
+            font-family: 'Amiri', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #1A3323;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .day-title-de {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            color: #000000;
+            direction: ltr;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Course Cards Layout */
+        .courses-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 18px;
+            padding: 24px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:active {
+            transform: scale(0.99);
+        }
+
+        .category-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .category-title-ar {
+            font-family: 'Amiri', serif;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .category-title-de {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            direction: ltr;
+        }
+
+        .card-adab { border-top: 5px solid var(--adab-color); }
+        .card-adab .category-title-ar, .card-adab .category-title-de { color: var(--adab-color); }
+        .card-adab .btn-download { background-color: var(--adab-color); }
+        .card-adab .btn-download:hover { background-color: #3B4B3F; }
+
+        .card-aqidah { border-top: 5px solid var(--aqidah-color); }
+        .card-aqidah .category-title-ar, .card-aqidah .category-title-de { color: var(--aqidah-color); }
+        .card-aqidah .btn-download { background-color: var(--aqidah-color); }
+        .card-aqidah .btn-download:hover { background-color: #224955; }
+
+        .card-sirah { border-top: 5px solid var(--sirah-color); }
+        .card-sirah .category-title-ar, .card-sirah .category-title-de { color: var(--sirah-color); }
+        .card-sirah .btn-download { background-color: var(--sirah-color); }
+        .card-sirah .btn-download:hover { background-color: #602D2D; }
+
+        .book-info { margin-bottom: 20px; }
+
+        .book-title-ar {
+            font-family: 'Amiri', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.3;
+            margin-bottom: 4px;
+        }
+
+        .book-title-de {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 14px;
+            color: var(--text-muted);
+            font-weight: 500;
+            direction: ltr;
+            text-align: right;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .book-author {
+            font-size: 13.5px;
+            color: #6B7280;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-download {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 14px 20px;
+            color: #FFFFFF;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .btn-text-ar { font-family: 'Noto Naskh Arabic', serif; }
+
+        .btn-text-de {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 13px;
+            opacity: 0.9;
+            direction: ltr;
+        }
+
+        .pdf-icon {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        footer {
+            margin-top: 36px;
+            text-align: center;
+            padding: 16px;
+        }
+
+        .footer-logo {
+            font-family: 'Cinzel', serif;
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--gold-accent);
+            letter-spacing: 3px;
+        }
+
+        .footer-sub {
+            font-size: 11px;
+            color: #9CA3AF;
+            margin-top: 4px;
+        }
+
+        /* =========================================
+           تأثيرات الظهور عند فتح الموقع (Animations)
+           ========================================= */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* تطبيق الحركة وتحديد زمن الظهور لكل عنصر */
+        header, .day-title, .card, footer {
+            opacity: 0; /* تحضير العناصر لتبدأ غير مرئية */
+            animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        /* التتابع الزمني لظهور العناصر */
+        header { animation-delay: 0.1s; }
+        .day-title:nth-of-type(1) { animation-delay: 0.25s; }
+        .card-adab { animation-delay: 0.35s; }
+        .card-aqidah { animation-delay: 0.45s; }
+        .day-title:nth-of-type(2) { animation-delay: 0.55s; }
+        .card-sirah { animation-delay: 0.65s; }
+        footer { animation-delay: 0.75s; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <img src="logo.png.png" alt="Bidayah Logo" class="header-logo">
+            <h1 class="main-title">مقررات الدورة العلمية</h1>
+            <div class="subtitle">BĪDĀYAH-SEMINAR</div>
+            <div class="divider"></div>
+        </header>
+
+        <!-- Courses Section -->
+        <main class="courses-list">
+
+            <!-- اليوم الأول -->
+            <div class="day-title">
+                <span class="day-title-ar">📌 اليوم الأول</span>
+                <span class="day-title-de">ERSTER TAG 📌</span>
+            </div>
+
+            <!-- 1. Adab -->
+            <article class="card card-adab">
+                <div class="category-header">
+                    <span class="category-title-ar">الأدب</span>
+                    <span class="category-title-de">ADAB</span>
+                </div>
+                <div class="book-info">
+                    <h2 class="book-title-ar">منظومة دُرَّة طالب العلم</h2>
+                    <p class="book-title-de">Die Perle des Wissensstrebenden</p>
+                    <p class="book-author">تأليف: الشيخ د. مطلق بن جاسر الجاسر</p>
+                </div>
+                <a href="-منظومة-درة-طالب-العلم.pdf" target="_blank" rel="noopener" class="btn-download">
+                    <svg class="pdf-icon" viewBox="0 0 24 24">
+                        <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM12 17L7 12H10V8H14V12H17L12 17Z"/>
+                    </svg>
+                    <span class="btn-text-ar">فتح الكتاب</span>
+                    <span>|</span>
+                    <span class="btn-text-de">PDF öffnen</span>
+                </a>
+            </article>
+
+            <!-- 2. Aqidah -->
+            <article class="card card-aqidah">
+                <div class="category-header">
+                    <span class="category-title-ar">العقيدة</span>
+                    <span class="category-title-de">ʿAQĪDAH</span>
+                </div>
+                <div class="book-info">
+                    <h2 class="book-title-ar">اعتقاد عبد الله بن المبارك</h2>
+                    <p class="book-title-de">Glaubenslehre des Imām Ibn Al-Mubārak</p>
+                    <p class="book-author">أبو عبد الرحمن عبد الله بن المبارك الحنظلي (ت 181هـ)</p>
+                </div>
+                <a href="اعتقاد عبد الله ابن المبارك.pdf" target="_blank" rel="noopener" class="btn-download">
+                    <svg class="pdf-icon" viewBox="0 0 24 24">
+                        <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM12 17L7 12H10V8H14V12H17L12 17Z"/>
+                    </svg>
+                    <span class="btn-text-ar">فتح الكتاب</span>
+                    <span>|</span>
+                    <span class="btn-text-de">PDF öffnen</span>
+                </a>
+            </article>
+
+            <!-- اليوم الثاني -->
+            <div class="day-title" style="margin-top: 36px;">
+                <span class="day-title-ar">📌 اليوم الثاني</span>
+                <span class="day-title-de">ZWEITER TAG 📌</span>
+            </div>
+
+            <!-- 3. Sirah -->
+            <article class="card card-sirah">
+                <div class="category-header">
+                    <span class="category-title-ar">السيرة</span>
+                    <span class="category-title-de">SĪRAH</span>
+                </div>
+                <div class="book-info">
+                    <h2 class="book-title-ar">أوجز السِّيَر لخير البشر</h2>
+                    <p class="book-title-de">Awǧaz as-Siyar li-Ḫayr al-Bašar</p>
+                    <p class="book-author">لأبي الحسين أحمد بن فارس (ت 395هـ)</p>
+                </div>
+                <a href="أوْجزالسّير لخير البشر لابن فارس.pdf" target="_blank" rel="noopener" class="btn-download">
+                    <svg class="pdf-icon" viewBox="0 0 24 24">
+                        <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM12 17L7 12H10V8H14V12H17L12 17Z"/>
+                    </svg>
+                    <span class="btn-text-ar">فتح الكتاب</span>
+                    <span>|</span>
+                    <span class="btn-text-de">PDF öffnen</span>
+                </a>
+            </article>
+
+        </main>
+
+        <!-- Footer Section -->
+        <footer>
+            <div class="footer-logo">BĪDĀYAH-SEMINAR</div>
+            <div class="footer-sub">جميع الحقوق محفوظة ©</div>
+        </footer>
+    </div>
+
+</body>
+</html>
             /* Section Specific Colors */
             --adab-color: #4A5D4E;        /* Olive Green */
             --adab-bg: #F0F4F1;
