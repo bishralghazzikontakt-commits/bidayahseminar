@@ -104,9 +104,18 @@
             margin: 28px 0 16px 0;
             display: flex;
             align-items: center;
-            gap: 8px;
+            justify-content: space-between;
             border-bottom: 2px solid var(--border-color);
             padding-bottom: 8px;
+        }
+
+        .day-title-de {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--gold-accent);
+            letter-spacing: 1.5px;
+            direction: ltr;
         }
 
         /* Course Cards Layout */
@@ -303,7 +312,10 @@
         <main class="courses-list">
 
             <!-- اليوم الأول -->
-            <h2 class="day-header">📌 اليوم الأول</h2>
+            <h2 class="day-header">
+                <span>📌 اليوم الأول</span>
+                <span class="day-title-de">TAG 1</span>
+            </h2>
 
             <!-- 1. Adab -->
             <article class="card card-adab">
@@ -348,7 +360,10 @@
             </article>
 
             <!-- اليوم الثاني -->
-            <h2 class="day-header" style="margin-top: 36px;">📌 اليوم الثاني</h2>
+            <h2 class="day-header" style="margin-top: 36px;">
+                <span>📌 اليوم الثاني</span>
+                <span class="day-title-de">TAG 2</span>
+            </h2>
 
             <!-- 3. Sirah -->
             <article class="card card-sirah">
