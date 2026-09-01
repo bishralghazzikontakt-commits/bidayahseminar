@@ -133,16 +133,11 @@
             font-size: 14px;
             font-weight: 700;
             letter-spacing: 1.5px;
-            color: var(--gold-accent);
+            color: #000000; /* خط أسود لعناوين الأيام */
             direction: ltr;
             display: flex;
             align-items: center;
             gap: 8px;
-        }
-
-        /* تنسيق خاص للألماني في اليوم الأول فقط باللون الأسود */
-        .day-1-de {
-            color: #000000;
         }
 
         /* Course Cards Layout */
@@ -327,6 +322,7 @@
 <body>
 
     <div class="container">
+        <!-- Header Section -->
         <header>
             <img src="logo.png" alt="Bidayah Logo" class="header-logo">
             <h1 class="main-title">مقررات الدورة العلمية</h1>
@@ -334,13 +330,16 @@
             <div class="divider"></div>
         </header>
 
+        <!-- Courses Section -->
         <main class="courses-list">
 
+            <!-- عنوان اليوم الأول (العربي يمين، الألماني يسار وبخط أسود) -->
             <div class="day-title">
                 <span class="day-title-ar">📌 اليوم الأول</span>
-                <span class="day-title-de day-1-de">ERSTER TAG 📌</span>
+                <span class="day-title-de">ERSTER TAG 📌</span>
             </div>
 
+            <!-- 1. Adab -->
             <article class="card card-adab">
                 <div class="category-header">
                     <span class="category-title-ar">الأدب</span>
@@ -361,6 +360,7 @@
                 </a>
             </article>
 
+            <!-- 2. Aqidah -->
             <article class="card card-aqidah">
                 <div class="category-header">
                     <span class="category-title-ar">العقيدة</span>
@@ -381,11 +381,13 @@
                 </a>
             </article>
 
+            <!-- عنوان اليوم الثاني (العربي يمين، الألماني يسار وبخط أسود) -->
             <div class="day-title" style="margin-top: 36px;">
-                <span class="day-title-de">📌 ZWEITER TAG</span>
                 <span class="day-title-ar">📌 اليوم الثاني</span>
+                <span class="day-title-de">ZWEITER TAG 📌</span>
             </div>
 
+            <!-- 3. Sirah -->
             <article class="card card-sirah">
                 <div class="category-header">
                     <span class="category-title-ar">السيرة</span>
@@ -408,6 +410,7 @@
 
         </main>
 
+        <!-- Footer Section -->
         <footer>
             <div class="footer-logo">BĪDĀYAH-SEMINAR</div>
             <div class="footer-sub">جميع الحقوق محفوظة ©</div>
